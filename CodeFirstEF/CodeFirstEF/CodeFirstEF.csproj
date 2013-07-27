@@ -51,9 +51,9 @@
     <Compile Include="Migrations\201307270020059_InitialCreate.Designer.cs">
       <DependentUpon>201307270020059_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201307270024141_AddColor.cs" />
-    <Compile Include="Migrations\201307270024141_AddColor.Designer.cs">
-      <DependentUpon>201307270024141_AddColor.cs</DependentUpon>
+    <Compile Include="Migrations\201307270045231_AddColor.cs" />
+    <Compile Include="Migrations\201307270045231_AddColor.Designer.cs">
+      <DependentUpon>201307270045231_AddColor.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -67,8 +67,8 @@
     <EmbeddedResource Include="Migrations\201307270020059_InitialCreate.resx">
       <DependentUpon>201307270020059_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201307270024141_AddColor.resx">
-      <DependentUpon>201307270024141_AddColor.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201307270045231_AddColor.resx">
+      <DependentUpon>201307270045231_AddColor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

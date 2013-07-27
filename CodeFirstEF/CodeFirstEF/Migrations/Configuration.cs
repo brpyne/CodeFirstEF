@@ -21,13 +21,11 @@ namespace CodeFirstEF.Migrations
         {
             //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
+            //  AddOrUpdate() to avoid creating duplicate seed data.
+            //  Specify primary key to do the update and keep a consistent record set.
+            context.Toys.AddOrUpdate(new Toy() { ToyID = 1, Name = "Car", Color = "Red"});
+            context.Toys.AddOrUpdate(new Toy() { ToyID = 2, Name = "Bucket", Color = "Blue" });
 
-            context.Toys.Add(new Toy() { Name = "Truck" });
-            context.Toys.Add(new Toy() { Name = "Shovel" });
-
-            base.Seed(context);
             context.SaveChanges();
         }
     }

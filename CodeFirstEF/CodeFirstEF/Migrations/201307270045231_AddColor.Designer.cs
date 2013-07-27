@@ -11,7 +11,7 @@ namespace CodeFirstEF.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201307270024141_AddColor"; }
+            get { return "201307270045231_AddColor"; }
         }
         
         string IMigrationMetadata.Source

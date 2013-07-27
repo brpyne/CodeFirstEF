@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,9 @@ namespace CodeFirstEF
             {
                 Console.Write("Enter a name for a new toy: ");
                 var name = Console.ReadLine();
+
+                Console.Write("Enter a color for the toy: ");
+                var color = Console.ReadLine();
 
                 var toy = new Toy { Name = name };
                 db.Toys.Add(toy);
@@ -34,6 +38,7 @@ namespace CodeFirstEF
     public class Sandbox
     {
         public int SandboxID { get; set; }
+
         public string Name { get; set; }
         public bool IsFun { get; set; }
 
@@ -43,7 +48,9 @@ namespace CodeFirstEF
     public class Toy
     {
         public int ToyID { get; set; }
+
         public string Name { get; set; }
+        public string Color { get; set; }
     }
 
     public class SandboxContext : DbContext

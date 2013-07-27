@@ -5,9 +5,6 @@ namespace CodeFirstEF.Migrations
     
     public partial class AddColor : DbMigration
     {
-        // Add-Migration AddColor
-        // Update-Database
-
         public override void Up()
         {
             AddColumn("dbo.Toys", "Color", c => c.String());
