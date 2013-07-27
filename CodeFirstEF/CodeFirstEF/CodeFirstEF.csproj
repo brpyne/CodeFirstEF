@@ -47,12 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201307270020059_InitialCreate.cs" />
+    <Compile Include="Migrations\201307270020059_InitialCreate.Designer.cs">
+      <DependentUpon>201307270020059_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201307270024141_AddColor.cs" />
+    <Compile Include="Migrations\201307270024141_AddColor.Designer.cs">
+      <DependentUpon>201307270024141_AddColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201307270020059_InitialCreate.resx">
+      <DependentUpon>201307270020059_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201307270024141_AddColor.resx">
+      <DependentUpon>201307270024141_AddColor.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
