@@ -236,8 +236,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Toy\Index.cshtml" />
     <Content Include="Views\Toy\Details.cshtml" />
-    <Content Include="Views\Toy\Create.cshtml" />
-    <Content Include="Views\Toy\Edit.cshtml" />
+    <Content Include="Views\Toy\_CreateOrEdit.cshtml" />
     <Content Include="Views\Toy\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>

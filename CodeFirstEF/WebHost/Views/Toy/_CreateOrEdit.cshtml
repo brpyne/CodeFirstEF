@@ -1,18 +1,10 @@
 ﻿@model CodeFirstEF.Toy
 
-@{
-    ViewBag.Title = "Edit";
-}
-
-<h2>Edit</h2>
-
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Toy</legend>
-
         @Html.HiddenFor(model => model.ToyID)
 
         <div class="editor-label">
@@ -32,7 +24,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Create" />
         </p>
     </fieldset>
 }

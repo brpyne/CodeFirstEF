@@ -16,7 +16,7 @@ namespace WebHost
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Toy", action = "Create", id = UrlParameter.Optional }
+                defaults: new { controller = "Toy", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

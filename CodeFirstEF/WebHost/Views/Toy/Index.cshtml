@@ -1,39 +1,42 @@
-﻿@model IEnumerable<CodeFirstEF.Toy>
+﻿@using CodeFirstEF
+@model IEnumerable<CodeFirstEF.Toy>
 
-@{
-    ViewBag.Title = "Index";
-}
+<h3>Manage Toys</h3>
 
-<h2>Index</h2>
+<div class="span4 pull-right">
+    @Html.Partial("_CreateOrEdit", new Toy())
+</div>
+<div class="span6">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (Toy item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new {id = item.ToyID}) |
+                    @Html.ActionLink("Details", "Details", new {id = item.ToyID}) |
+                    @Html.ActionLink("Delete", "Delete", new {id = item.ToyID})
+                </td>
+            </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ToyID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ToyID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ToyID })
-        </td>
-    </tr>
-}
-
-</table>
+    </table>
+</div>
